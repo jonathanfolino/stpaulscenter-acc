@@ -397,3 +397,109 @@ i{
     cursor: pointer;
     background: #b3b3ff;
 }
+
+
+/*  */
+/*  */
+/*  */
+/* About Us Page */
+/*  */
+/*  */
+
+.maincontainer{
+    padding: 30px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.title, .subtitle, .subsubtitle{
+    color: black;
+}
+
+#ourmission, #ourteam, #ourboard, #contact{
+    padding-top: 30px;
+}
+
+.subtitle{
+    font-size: 35px;
+}
+
+.subsubtitle{
+    font-size: 25px;
+}
+
+.infocontainer{
+    width: 80%;
+    float: none;
+    margin: 0 auto;
+    height: 200px;
+}
+
+.infocontainer img{
+    display: block;
+    float: none;
+    height: 100%;
+    margin: 0 auto;
+}
+
+.imagecontainer{
+    width: 25%;
+    margin: 0;
+}
+
+.infocontainerimage{
+    width: 50%;
+    height: 100%;
+    margin: 0;
+}
+
+.infocontainertext{
+    width: 50%;
+    margin: 0;
+}
+
+.firstp{
+    margin: 14px 0 0 0;
+}
+
+.secondp{
+    margin: 0;
+    text-align: center;
+    margin: 3px 0 3px 0;
+}
+
+.infocontainertext ul{
+    margin: 0 auto;
+    display: block;
+}
+
+.teammember{
+    float: none;
+    margin: 0 auto;
+    overflow-y: hidden;
+}
+
+.teaminfo{
+    margin: 0;
+    width: 75%;
+    padding: 10px;
+}
+
+.teammember img{
+    display: block;
+    float: left;
+    width: 100%;
+}
+
+.teammember p{
+    text-align: left;
+}
+
+.name{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+hr{
+    margin: 10px 0 10px 0;
+}
