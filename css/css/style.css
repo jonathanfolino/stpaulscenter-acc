@@ -1,0 +1,473 @@
+
+/* RESET */
+
+html,body{margin:0;padding:0} div,section,header,footer,nav{display:block;box-sizing:border-box;float:left;width:100%;position:relative;}
+
+/* ~~~~~~~~STYLE~~~~~~~~ */
+
+body{
+    background: #ffffff;
+}
+
+/* NAVBAR */
+
+.primary-menu-item{
+    float: right;
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 20px;
+    text-align: center;
+}
+
+.secondary-menu{
+    float: none;
+    list-style: none;
+    overflow: hidden;
+    margin: 40px 0 0 0;
+    padding: 0;
+    width: 145px;
+    text-align: center;
+    height: 0;
+    position: absolute;
+    z-index: 50;
+    border-top: 3px color: #a591ca solid;
+    border-radius: 3px;
+
+    -webkit-transition: height .3s ease-in;
+    -moz-transition: height .3s ease-in;
+    -ms-transition: height .3s ease-in;
+    -o-transition: height .3s ease-in;
+    transition: height .3s ease-in;
+}
+
+.navOption:hover ~ .secondary-menu{
+    height: 150px;
+}
+
+.secondary-menu:hover{
+    height: 150px;
+}
+
+.secondary-menu-item{
+    padding: 5px 15px 5px 15px;
+    background: white;
+    color: #cc99ff;
+    border-bottom: 2px #ccc solid;
+}
+
+.secondary-menu-item a:hover{
+    color: #ccccff;
+}
+
+.top{
+    border-top: 5px #ccccff solid;
+}
+
+.secondary-menu a{
+    font-family: 'Nanum Gothic', sans-serif;
+    text-decoration: none;
+    color: #aa98cd;
+    transition: 100ms;
+}
+.fa-heart{
+    margin-right: 2px;
+    font-size: 20px;
+    padding: 0;
+}
+.boldItem{
+    font-weight: bold;
+}
+.moveMenuLeft{
+    margin-left: -50px;
+}
+
+/*  */
+/*  */
+
+#navbar{
+    box-sizing: border-box;
+    float: none;
+    width: 100%;
+    height: 50px;
+    background: #ffffff;
+    position: fixed;
+    z-index: 10000;
+}
+#logo{
+    width:15%;
+    padding-left: 5px;
+}
+#logoGraphic{
+    height: 50px;
+    width: 50px;
+}
+.navOption{
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 12px 20px 0 0;
+    float: right;
+    color: #c7bade;
+    font-size: 20px;
+    transition: 150ms;
+}
+.navOption:hover{
+    cursor: pointer;
+    color: #e3ddee;
+}
+
+
+/* END NAVBAR */
+
+/* MAIN */
+
+#wrapper{
+    width:100%;
+    margin: 0 auto;
+    float:none;
+    overflow-y:hidden;
+    padding-top: 50px;
+}
+
+.missionRow{
+    padding: 0;
+}
+.missionRow::after{
+    background-image: url("../img/exterior.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: .5;
+}
+.projectsRow{
+    padding: 0;
+}
+.projectsRow::after{
+    background-image: url("../img/window.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: .5;
+}
+.container{
+    box-sizing: border-box;
+    max width: 500px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+h1{
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 60px;
+    color: #ffffff;
+    display: block;
+}
+h2{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: #ffffff;
+    display: block;
+}
+.donateButton{
+    width: 100px;
+    height: 50px;
+    background-color: #e6e6ff;
+    margin: 0 auto;
+    border-radius: 5px;
+    float: none;
+    margin-bottom: 5%;
+    transition: 200ms;
+}
+.donateText{
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #ffffff;
+    font-weight: bolder;
+    position: absolute;
+    top: 27%;
+}
+.donateButton:hover{
+    cursor: pointer;
+    background-color: #bbbbff;
+
+}
+h3{
+    text-align: center;
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 45px;
+    color: #ffffff;
+    display: block;
+}
+.textBox{
+    background-color: #e6e6ff;
+    border: 2px solid #c2c5d3;
+    border-radius: 1px;
+    margin-bottom: 25px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+h4{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 18px;
+    color: #ffffff;
+    display: block;
+}
+.subContainer{
+    margin-bottom: 15px;
+}
+.rowCaptionLeft{
+    padding-right: 50%;
+    background: #ffffff;
+}
+.rowPhotoRight{
+    width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 0px;
+    height: 100%;
+    background-image: url("../img/placeholder.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.rowCaptionRight{
+    padding-Left: 50%;
+    background: #ffffff;
+    z-index: 90;
+}
+.rowPhotoLeft{
+    width: 50%;
+    position: absolute;
+    right: 50%;
+    top: 0px;
+    height: 100%;
+    background-image: url("../img/placeholder.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 100;
+}
+.textContainer{
+    padding: 5% 10% 5% 10%;
+}
+.projectCaption{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 15px;
+    color: #000000;
+    display: block;
+    font-weight: bold;
+}
+
+/* SUCCESS STORIES */
+
+.storiesRow{
+    padding: 0;
+}
+.storiesRow::after{
+    background: #ffffff;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -1;
+    opacity: .5;
+}
+
+/* Quilts */
+#wrapper1 {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+.quiltphoto {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 600px;
+    width: 100%;
+    background-image: url("../img/quilts.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.quiltphoto .container {
+    padding: 200px 20px;
+}
+
+.quiltphoto h1{
+    background-color: #b09cd2;
+}
+
+.divider {
+    position: absolute;
+    top: 600px;
+    bottom: 0;
+    left: 0;
+    right:0;
+    width: 100%;
+    height: 15px;
+    background-image: url("../img/quilt.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 1;
+}
+
+.quiltstory {
+    width: 100%;
+    height: 600px;
+    background-color: #F5F3F2;
+    padding: 5% 10%;
+    z-index: 100;
+    position: absolute;
+    top:615px;
+    bottom: 0;
+    right: 0;
+
+}
+
+.quiltstory h3 {
+    color: #bb97ce;
+
+}
+
+.story{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.quiltphoto2 {
+    position: absolute;
+    top: 1215px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+/* FOOTER */
+
+.footer{
+    background: #ccccff;
+    padding: 10px;
+    border-top: 5px #c2c5d3 solid;
+}
+
+.footerdiv{
+    width: 33.33%;
+    padding-left: 30px;
+}
+
+.footerdiv ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footerdiv li{
+    margin: 3px 0 3px 0;
+    color:#000000;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footerdiv li a{
+    text-decoration: none;
+    color:#000000;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.footerdiv li a:hover{
+    color:#808080;
+}
+
+.footerdiv p{
+    color: #ffffff;
+    font-weight: bold;
+    margin: 5px 0 5px 0;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.socialmedia{
+    background: #9999ff;
+    min-height: 20px;
+    margin: 20px 0 20px 0;
+    padding: 5px 50px 10px 5px;
+}
+
+i{
+    padding: 5px;
+
+}
+
+.socialmedia a{
+    float: right;
+    text-decoration: none;
+    text-align: center;
+    color: #e6e6ff;
+    font-size: 20px;
+    margin: 5px 5px 0 5px;
+    border: 2px #e6e6ff solid;
+    border-radius: 50%;
+    height: 34px;
+    width: 34px;
+    transition: 100ms;
+}
+
+.socialmedia a:hover{
+    color: #ffffff;
+    border-color: #ffffff;
+}
+
+.socialmedia p{
+    color: #e6e6ff;
+    float: left;
+    width: auto;
+    margin: 13px 20px 0 50px;
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.emailform{
+    float: left;
+    margin-top: 5px;
+}
+
+.emailInput{
+    width: 250px;
+    height: 30px;
+}
+
+.emailButton{
+    background: #ccccff;
+    color: #000000
+    border: none;
+    margin-left: 10px;
+    height: 30px;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 150ms;
+}
+.emailButton:hover{
+    cursor: pointer;
+    background: #b3b3ff;
+}
