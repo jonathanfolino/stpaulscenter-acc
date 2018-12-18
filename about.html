@@ -15,6 +15,8 @@
         crossorigin="anonymous"></script>
         <!-- JAVASCRIPT -->
         <script src="js/functions.js" charset="utf-8"></script>
+        <!-- OWLCAROUSEL -->
+        <script src="js/owl.carousel.min.js" charset="utf-8"></script>
         <!--  -->
         <meta charset="utf-8">
         <title>About Us</title>
@@ -25,26 +27,26 @@
                 <img id="logoGraphic" src="img/logo-placeholder.png" alt="placeholderLogo">
             </div>
             <li class="primary-menu-item">
-                <p class="navOption boldItem"><i class="far fa-heart boldItem"></i>Donate</p>
+                <p class="navOption boldItem"><a href="https://www.nycharities.org/give/donate.aspx?cc=1923" target="_blank"><i class="far fa-heart boldItem"></i>Donate</a></p>
             </li>
             <li class="primary-menu-item">
-                <p class="navOption">Learn</p>
+                <p class="navOption"><a href="#">Learn</a></p>
                 <ul class="secondary-menu">
                         <li class="secondary-menu-item top"><a href="#">Blog</a></li>
                         <li class="secondary-menu-item"><a href="#">Articles</a></li>
                 </ul>
             </li>
             <li class="primary-menu-item">
-                <p class="navOption">Get Involved</p>
+                <p class="navOption"><a href="#">Get Involved</a></p>
                 <ul class="secondary-menu">
                         <li class="secondary-menu-item top"><a href="#">Volunteer</a></li>
-                        <li class="secondary-menu-item"><a href="#">Board of Directors</a></li>
+                        <li class="secondary-menu-item"><a href="#">Join Our Board</a></li>
                         <li class="secondary-menu-item"><a href="#">Events</a></li>
                         <li class="secondary-menu-item"><a href="#">Employment</a></li>
                     </ul>
             </li>
             <li class="primary-menu-item">
-                <p class="navOption">Our Projects</p>
+                <p class="navOption"><a href="#">Our Projects</a></p>
                 <ul class="secondary-menu">
                     <li class="secondary-menu-item top"><a href="#">3rd St Shelter</a></li>
                     <li class="secondary-menu-item"><a href="#">Housing Programs</a></li>
@@ -52,13 +54,17 @@
                 </ul>
             </li>
             <li class="primary-menu-item">
-                <p class="navOption">About</p>
+                <p class="navOption"><a href="about.html">About</a></p>
                     <ul class="secondary-menu moveMenuLeft">
                         <li class="secondary-menu-item top"><a href="#ourmission">Our Mission</a></li>
+                        <li class="secondary-menu-item"><a href="#ourhistory">Our History</a></li>
                         <li class="secondary-menu-item"><a href="#ourteam">Our Team</a></li>
                         <li class="secondary-menu-item"><a href="#ourboard">Our Board</a></li>
                         <li class="secondary-menu-item"><a href="#contact">Contact Us</a></li>
                     </ul>
+            </li>
+            <li class="primary-menu-item">
+                <p class="navOption"><a href="index.html">Home</a></p>
             </li>
         </div>
         <div class="maincontainer">
@@ -81,7 +87,7 @@
                 <div class="infocontainer">
                     <div class="infocontainertext">
                         <p class="secondp">
-                            Areas of support and services include:
+                            Areas of support and services we provide include:
                         </p>
                         <ul>
                             <li>Parenting</li>
@@ -105,9 +111,57 @@
                     </div>
                     <div class="infocontainertext">
                         <p class="firstp">
-                            St Paul's offers a 12 mopnth after shelter case management program called <b>Bridges</b>.  This program was esablished after noticing a number of families return to homelessness after leaving the shelter.  We work with moms on their transition to housing, ensuring that children are enrolled in school, referring moms to needed support services, and securing items to set up new households, such as furniture and kitchen items.
+                            St Paul's offers a 12 month after shelter case management program called <b>Bridges</b>.  This program was esablished after noticing a number of families return to homelessness after leaving the shelter.  We work with moms on their transition to housing, ensuring that children are enrolled in school, referring moms to needed support services, and securing items to set up new households, such as furniture and kitchen items. The <b>Enhanced Bridges</b> program provides short term rental or financial assistance and 6 months of intensive case management support.
                         </p>
                     </div>
+                </div>
+                <div class="infocontainer">
+                    <ul>
+                        <li>97% of Bridges families have not returned to homelessness at program completion.</li>
+                        <li>82% of the mothers in the Bridges program are employed.  15% are either in a skills training program or are completing their education.</li>
+                        <li>100% of Enhanced Bridges families are successful in their permanent housing solution.</li>
+                        <li>80% of family heads of household are experiencing success in 3 of 5 goals they have identified.</li>
+                    </ul>
+                </div>
+                <div class="infocontainer">
+                    <div class="infocontainertext">
+                        <p class="secondp">
+                            Our <b>Angel Fund</b> is the product of our many generous donations from the community.  The Angel Fund provides:
+                        </p>
+                        <ul>
+                            <li>Emergency rent. utility and phone payments</li>
+                            <li>Bus or taxi fare</li>
+                            <li>Obtaining legal documents</li>
+                            <li>Transportation home to other states</li>
+                            <li>Purchase of household items to help set up new apartments</li>
+                            <li>Application fees for school</li>
+                            <li>School clothes and supplies for children</li>
+                            <li>Storage for personal belongings until an apartment is secured</li>
+                            <li>Subsidized day care</li>
+                        </ul>
+                    </div>
+                    <div class="infocontainerimage">
+                        <img class="rotate90" src="img/bellah.jpg" alt="isis">
+                    </div>
+                </div>
+                <div class="infocontainer">
+                    <p>
+                        St. Paul’s Center is nonsectarian and offers housing regardless of race, age, religion, country of origin, or sexual orientation. Although, the St. Paul’s Center operates as an independent organization from the congregation that started it, it enjoys the support of not only the congregation at St. Timothy’s but also the congregations of churches of all denominations, many community service groups, local businesses and elected officials.
+                    </p>
+                </div>
+            </div>
+            <div id="ourhistory">
+                <h2 class="subtitle">Our History</h2>
+                <div class="history">
+                    <p>
+                        The concept for the St. Paul’s Center for homeless women and their children began in 2001 when St. Paul’s Lutheran Church in Rensselaer merged with St. Timothy’s Lutheran Church in North Greenbush. Faced with the decision of what to do with a 100 year old building in the inner city, a task force was formed to study options. After 18 months of extensive research and a visit to Commissioner John Beaudoin of the Rensselaer County Department of Social Services, the task force learned that shelter beds for homeless women and children were the most critical unmet need in the county. Under the inspired leadership of Pastor Lee Dyer, the congregation voted unanimously to donate the building to the project.
+                    </p>
+                    <p>
+                        The project was awarded a grant from the State of New York Office of Temporary and Disability Assistance, Homeless Housing and Assistance Program to renovate the building into a 19 bed shelter for women and children.
+                    </p>
+                    <p>
+                        The groundbreaking ceremony was held in October 2005, and in February 2006, St. Paul’s Center began operating as a 501(c)3 non-profit organization under its own board of directors. The Center opened its doors to its first residents on October 2, 2006.
+                    </p>
                 </div>
             </div>
             <div id="ourteam">
@@ -334,6 +388,9 @@
                 <h2 class="subtitle">Contact Us</h2>
                 <p>
                     P.O. Box 589 | Rensselaer, NY 12144 | P. (518) 434-2910 | F. (518) 689-2083
+                </p>
+                <p>
+                    St. Paul’s Center is a 501(c)3 not for profit organization. Upon request, a copy of the latest annual report can be obtained from St. Paul’s Center (PO Box 589, Rensselaer, NY 12144) or from the Office of the Attorney General, by writing the Charities Bureau, 120 Broadway, New York, NY 10271.
                 </p>
             </div>
         </div>
