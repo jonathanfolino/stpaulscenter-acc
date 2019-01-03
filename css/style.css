@@ -119,6 +119,60 @@ body{
     color: #e3ddee;
 }
 
+.popupRequest{
+    display: none;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000000;
+    padding: 0;
+    position: fixed;
+
+}
+
+.popupBackground{
+    background: #420a70;
+    height: 100%;
+    margin: 0;
+    opacity: 0;
+    z-index: 1000001;
+}
+
+.popupContent{
+    opacity: 0;
+    position: absolute;
+    top: 30px;
+    z-index: 1000002;
+    text-align: center;
+    color: white;
+    font-size: 22px;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.popupContent i{
+    float: right;
+    margin-right: 30px;;
+}
+
+.popupContent p{
+    margin-top: 100px;
+}
+
+.popupContent button{
+    font-weight: bolder;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.popupContent form{
+    margin: 0 auto;
+    float: none;
+}
+
+.unhide{
+    display: block;
+}
 
 /* END NAVBAR */
 
@@ -513,6 +567,10 @@ i{
 
 }
 
+.socialmedia i{
+    margin-top: 1px;
+}
+
 .socialmedia a{
     float: right;
     text-decoration: none;
@@ -540,17 +598,17 @@ i{
     font-family: 'Nanum Gothic', sans-serif;
 }
 
-.emailform{
+.emailform, .popupform{
     float: left;
     margin-top: 5px;
 }
 
-.emailInput{
+.emailInput, .popupInput{
     width: 250px;
     height: 30px;
 }
 
-.emailButton{
+.emailButton, .popupButton{
     background: #ccccff;
     color: #000000
     border: none;
@@ -562,7 +620,7 @@ i{
     transition: 150ms;
     font-family: 'Nanum Gothic', sans-serif;
 }
-.emailButton:hover{
+.emailButton:hover, .popupButton:hover{
     cursor: pointer;
     background: #b3b3ff;
 }
@@ -577,16 +635,41 @@ i{
 /*  */
 
 .maincontainer{
-    padding: 30px;
+    padding: 40px 0;
     font-family: 'Nanum Gothic', sans-serif;
+    background: #c7bade;
+    max-width: 1200px;
+    margin: 0 auto;
+    float: none;
 }
 
 .title, .subtitle, .subsubtitle{
     color: black;
 }
 
+.title{
+    margin-bottom: 15px;
+}
+
 #ourmission, #ourhistory, #ourteam, #ourboard, #contact{
     padding-top: 30px;
+}
+
+#ourmission{
+    background-image: linear-gradient(#c7bade, #420a70);
+}
+
+.missionStatement{
+    width: 80%;
+    margin: 0 auto 20px auto;
+    text-align: center;
+    background: #e6e6ff;
+    color: white;
+    border: 2px solid #c2c5d3;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding: 15px;
+    float: none;
 }
 
 .subtitle{
@@ -599,43 +682,50 @@ i{
 
 .infocontainer{
     width: 80%;
+    height: 300px;
     float: none;
-    margin: 0 auto;
+    margin: 25px auto 0 auto;
     overflow: hidden;
-}
-
-.infocontainer img{
-    display: block;
-    float: none;
-    height: 220px;
-    margin: 0 auto;
-    max-width: 100%;
-
-    -moz-transition: scale(1.1);
-    -webkit-transition: scale(1.1);
-    -o-transition: scale(1.1);
-    -ms-transition: scale(1.1);
-    transition: all .5s;
-}
-
-.infocontainerimage img:hover{
-    -moz-transform: scale(1.1);
-    -webkit-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    transform: scale(1.2);
-}
-
-.imagecontainer{
-    width: 25%;
-    margin: 0;
+    padding: 0;
 }
 
 .infocontainerimage{
     width: 50%;
     height: 100%;
     margin: 0;
+    background-image: url(../img/brendaandbaby.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow: hidden;
+
+    -moz-transition: scale .5s;
+    -webkit-transition: scale .5s;
+    -o-transition: scale .5s;
+    -ms-transition: scale .5s;
+    transition: all .5s ease-in;
+}
+
+/* .infocontainer img{
+    display: block;
+    float: none;
+    height: 220px;
+    margin: 0 auto;
+    max-width: 100%;
+
+    -moz-transition: scale .5s;
+    -webkit-transition: scale .5s;
+    -o-transition: scale .5s;
+    -ms-transition: scale .5s;
+    transition: all .5s ease-in;
+} */
+
+.infocontainerimage:hover{
+    -moz-transform: scale(1.2);
+    -webkit-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
 }
 
 .rotate90{
@@ -648,11 +738,18 @@ i{
 
 .infocontainertext{
     width: 50%;
+    height: 100%;
     margin: 0;
-    background: #e6e6ff;
+    background: white;
+    z-index: 2;
+    padding: 10px;
 }
 
-.firstp{
+.infocontainertext p {
+    text-align: center;
+}
+
+/* .firstp{
     margin: 14px 0 0 0;
 }
 
@@ -660,14 +757,28 @@ i{
     margin: 0;
     text-align: center;
     margin: 3px 0 3px 0;
-}
+} */
 
 .infocontainertext ul{
     margin: 0 auto;
+    float: none;
     display: block;
 }
 
-.bridgestext{
+.additionalInfo{
+    width: 80%;
+    margin: 25px auto 20px auto;
+    text-align: center;
+    background: #e6e6ff;
+    color: white;
+    border: 2px solid #c2c5d3;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding: 15px;
+    float: none;
+}
+
+/* .bridgestext{
     width: 33.33%;
     margin: 0;
     background: green;
@@ -677,10 +788,12 @@ i{
     height: 100%;
     width: 33.33%;
     margin: 0;
-}
+} */
 
 #ourhistory{
-
+    background: white;
+    padding-bottom: 30px;
+    background-image: linear-gradient(#420a70, #c7bade);
 }
 
 .history{
@@ -690,36 +803,281 @@ i{
     background-size: cover;
     width: 80%;
     height: 800px;
+    margin: 0 auto;
+    float: none;
+    padding: 0;
+    color: white;
 }
 
+.historyOverlay{
+    margin: 0;
+    background: black;
+    opacity: .6;
+    width: 100%;
+    height: 100%;
+}
+
+.historyText{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 30px;
+    margin-top: 100px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+}
+
+.historyText p{
+    margin: 50px auto 0 auto;
+    width: 80%;
+}
+
+#ourteam{
+    background-image: linear-gradient(#c7bade, white);
+}
 .teammember{
-    float: none;
     margin: 0 auto;
     overflow-y: hidden;
+    width: 48%;
+    margin: 1%;
+    background: white;
 }
 
 .teaminfo{
-    margin: 0;
-    width: 75%;
-    padding: 10px;
+    padding: 10px 20px;;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    color: white;
+    opacity: 1;
+    line-height: 20px;
+
+    -webkit-transition: opacity .2s ease-in;
+    -moz-transition: opacity .2s ease-in;
+    -ms-transition: opacity .2s ease-in;
+    -o-transition: opacity .2s ease-in;
+    transition: opacity .2s ease-in;
 }
 
+.teammember:hover .imageOverlay{
+    opacity: 0;
+}
+
+.teammember:hover .teaminfo{
+    opacity: 0;
+}
+
+/* .imagecontainer{
+    width: 25%;
+    margin: 0;
+} */
+
+.imagecontainer{
+    /* background-image: url("../img/tracy.jpg"); */
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 400px;
+    padding: 0;
+}
+
+.tracy{
+    background-image: url("../img/tracy.jpg");
+}
+
+.shavina{
+    background-image: url("../img/shavina.jpg");
+}
+
+.charlee{
+    background-image: url("../img/charlee.jpg");
+}
+
+.jason{
+    background-image: url("../img/Jason.jpg");
+}
+
+.amanda{
+    background-image: url("../img/Amanda.jpg");
+}
+
+.samjones{
+    background-image: url("../img/samjones.jpg");
+
+}
+
+.imageOverlay{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background: black;
+    opacity: .7;
+
+    -webkit-transition: opacity .2s ease-in;
+    -moz-transition: opacity .2s ease-in;
+    -ms-transition: opacity .2s ease-in;
+    -o-transition: opacity .2s ease-in;
+    transition: opacity .2s ease-in;
+}
 .teammember img{
     display: block;
     float: left;
     width: 100%;
 }
 
-.teammember p{
-    text-align: left;
-}
-
 .name{
     font-size: 20px;
     font-weight: bold;
-    margin: 0 0 10px 0;
+    margin: 0;
+    padding: 10px;
+    background: #420a70;
+    color: white;
+    text-align: center;
+    border-bottom: 3px #f98604 solid;
 }
 
-hr{
-    margin: 10px 0 10px 0;
+#ourboard{
+    background-image: linear-gradient(white, #c7bade);
+}
+.boardmember{
+    width: 48%;
+    margin: 1%;
+}
+
+.bio{
+    padding: 20px;
+    background: white; //#e6e6ff;
+    min-height: 270px;
+    margin-top: 0;
+    line-height: 20px;
+}
+
+@media (max-width: 600px){
+    .maincontainer{
+        padding: 20px 0 0 0;
+    }
+
+    .popupform, .emailform{
+        width: 100%;
+    }
+
+    .popupInput, .popupButton{
+        width: 90%;
+    }
+
+    .popupButton{
+        margin: 5px 0 0 0;
+    }
+
+    .socialmedia{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .socialmedia p{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .emailInput, .emailButton{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .missionStatement, .additionalInfo, .infocontainer, .infocontainerimage, .infocontainertext{
+        width: 100%;
+    }
+
+    .infocontainer{
+        height: auto;
+    }
+
+    .infocontainerimage{
+        height: 100vw;
+    }
+
+    .history{
+        width: 100%;
+    }
+
+    .historyText{
+        margin: 0;
+        padding: 10px;
+    }
+
+    .historyText p{
+        width: 100%;
+    }
+
+    .teammember, .boardmember{
+        width: 100%;
+        margin: 5px 0 0 0;
+    }
+
+    .boardmember, .bio{
+        min-height: auto;
+    }
+}
+
+@media (max-width: 768px){
+    .missionStatement, .infocontainer, .additionalInfo, .history{
+        width: 95%;
+    }
+
+    .historyText{
+        padding: 10px;
+        margin: 0;
+    }
+
+    .historyText p{
+        width: 100%;
+    }
+
+    .teammember, .boardmember{
+        width: 95%;
+        margin: 5px auto;
+        float: none;
+    }
+
+    .socialmedia{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .socialmedia p{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .emailInput, .emailButton, .emailform{
+        margin: 0 auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 992px){
+    .historyText, .historyText p{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .socialmedia p{
+        margin: 13px 10px 0 10px;
+    }
+
+    .bio{
+        height: 420px;
+    }
+
+    .imagecontainer{
+        height: 510px;
+    }
 }
