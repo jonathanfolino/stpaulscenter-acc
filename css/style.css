@@ -178,7 +178,7 @@ body{
 
 /* MAIN */
 
-#wrapper{
+.3rdstshelter{
     width:100%;
     margin: 0 auto;
     float:none;
@@ -426,7 +426,7 @@ h4{
 
 /* Quilts */
 
-#wrapper1 {
+.wrapper1 {
     /* position: relative; */
     width: 100%;
     /* overflow: hidden; */
@@ -514,7 +514,7 @@ h4{
 
 /* HOUSING PROGRAM */
 
-#wrapper2 {
+.housing {
     width: 100%;
 }
 
