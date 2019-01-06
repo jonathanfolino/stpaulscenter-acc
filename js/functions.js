@@ -7,8 +7,48 @@ $(document).ready(function(){
         items:1,
     });
 
+    //get all of the primary menu links
+    var primaryMenuLinks = $(".primary-menu-item");
+
     //get all of the secondary links
     var secondaryMenuLinks = $(".secondary-menu-item");
+
+    //get the container that holds all the navbar options
+    var linkContainer = $(".linkContainer");
+
+    //get the hamburger
+    var hamburger = $(".hamburger");
+
+    //function used to control the navbar display
+    function navbarDisplayControl(icon, container, links){
+        if($(window).width() < 860){
+            if (!$(icon).hasClass("unhide")){
+                $(icon).addClass("unhide");
+                $(container).addClass("hide");
+            }
+        }
+
+        else if ($(window).width() >= 861){
+            if ($(icon).hasClass("unhide")){
+                $(icon).removeClass("unhide");
+                $(container).removeClass("hide");
+                if ($(container).hasClass("newMenuPosition")){
+                    $(container).removeClass("newMenuPosition");
+                    links.each(function(){
+                        $(this).removeClass("newMenuWidth");
+                    });
+                }
+            }
+        }
+    }
+    //call the function when the window is initally loaded
+    navbarDisplayControl(hamburger, linkContainer, primaryMenuLinks);
+
+    //control navbar display on window resizing
+    $(window).resize(function(){
+        navbarDisplayControl(hamburger, linkContainer, primaryMenuLinks);
+    });
+
     //enable all of the links in the navbar to scroll to the targeted section of the page
     secondaryMenuLinks.map(function(){
         $(this).on("click", function(){
@@ -28,7 +68,27 @@ $(document).ready(function(){
         });
     });
 
+    //control what happens when hamburger is clicked
+    $(hamburger).on("click", function(){
+        //if the priamry menu is open
+        if ($(primaryMenuLinks[0]).hasClass("newMenuWidth")){
+            $(linkContainer).removeClass("newMenuPosition");
+            $(linkContainer).addClass("hide");
+            primaryMenuLinks.each(function(){
+                $(this).removeClass("newMenuWidth");
+            });
+        }
+        //if the primary menu is closed
+        else {
+            $(linkContainer).addClass("newMenuPosition");
+            $(linkContainer).removeClass("hide");
+            primaryMenuLinks.each(function(){
+                $(this).addClass("newMenuWidth");
+            });
+        }
+    });
 
+    //control the display of the email popup
     var popupDisplay = false;
     setTimeout(function(){
         $("html").mouseleave(function(){
@@ -43,4 +103,5 @@ $(document).ready(function(){
             }
         });
     }, 5000);
+
 });

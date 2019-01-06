@@ -12,7 +12,7 @@ body{
 /* NAVBAR */
 
 .primary-menu-item{
-    float: right;
+    float: left;
     list-style: none;
     position: relative;
     padding: 0 0 0 20px;
@@ -29,6 +29,7 @@ body{
     text-align: center;
     height: 0;
     position: absolute;
+    top: 54px;
     z-index: 50;
     border-top: 3px color: #a591ca solid;
     border-radius: 3px;
@@ -78,7 +79,7 @@ body{
     font-weight: bold;
 }
 .moveMenuLeft{
-    margin-left: -50px;
+    left: -40px;
 }
 
 /*  */
@@ -88,10 +89,10 @@ body{
     box-sizing: border-box;
     float: none;
     width: 100%;
-    height: 50px;
-    background: #ffffff;
+    min-height: 50px;
     position: fixed;
     z-index: 10000;
+    background: white;
 }
 #logo{
     width:15%;
@@ -105,9 +106,29 @@ body{
     font-family: 'Nanum Gothic', sans-serif;
     margin: 12px 20px 0 0;
     float: right;
-    //color: #c7bade;
     font-size: 20px;
     transition: 150ms;
+}
+
+#navbar ul{
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.hamburger{
+    font-size: 42px;
+    color: #420a70;
+    margin-right: 10px;
+    display: none;
+}
+
+.hamburger-item{
+    float: right;
+    list-style: none;
+    position: relative;
+    padding: 0 0 0 20px;
+    text-align: center;
 }
 
 .navOption a{
@@ -670,10 +691,11 @@ i{
 .maincontainer{
     padding: 40px 0;
     font-family: 'Nanum Gothic', sans-serif;
-    background: #c7bade;
+    background: #47454f;
     max-width: 1200px;
     margin: 0 auto;
     float: none;
+    overflow: hidden;
 }
 
 .title, .subtitle, .subsubtitle{
@@ -688,9 +710,9 @@ i{
     padding-top: 30px;
 }
 
-#ourmission{
+/* #ourmission{
     background-image: linear-gradient(#c7bade, #420a70);
-}
+} */
 
 .missionStatement{
     width: 80%;
@@ -726,7 +748,7 @@ i{
     width: 50%;
     height: 100%;
     margin: 0;
-    background-image: url(../img/brendaandbaby.jpg);
+    background-image: url("../img/placeholder.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -739,19 +761,6 @@ i{
     transition: all .5s ease-in;
 }
 
-/* .infocontainer img{
-    display: block;
-    float: none;
-    height: 220px;
-    margin: 0 auto;
-    max-width: 100%;
-
-    -moz-transition: scale .5s;
-    -webkit-transition: scale .5s;
-    -o-transition: scale .5s;
-    -ms-transition: scale .5s;
-    transition: all .5s ease-in;
-} */
 
 .infocontainerimage:hover{
     -moz-transform: scale(1.2);
@@ -780,22 +789,19 @@ i{
 
 .infocontainertext p {
     text-align: center;
-}
-
-/* .firstp{
-    margin: 14px 0 0 0;
-}
-
-.secondp{
-    margin: 0;
+    font-family: 'Open Sans', sans-serif;
     text-align: center;
-    margin: 3px 0 3px 0;
-} */
+    font-size: 15px;
+    font-weight: bold;
+}
 
 .infocontainertext ul{
     margin: 0 auto;
     float: none;
     display: block;
+    font-size: 15px;
+    font-weight: bold;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .additionalInfo{
@@ -826,7 +832,7 @@ i{
 #ourhistory{
     background: white;
     padding-bottom: 30px;
-    background-image: linear-gradient(#420a70, #c7bade);
+    /* background-image: linear-gradient(#420a70, #c7bade); */
 }
 
 .history{
@@ -857,7 +863,7 @@ i{
     left: 0;
     right: 0;
     padding: 30px;
-    margin-top: 100px;
+    margin: 100px 0 0 0;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
     line-height: 24px;
@@ -868,9 +874,9 @@ i{
     width: 80%;
 }
 
-#ourteam{
+/* #ourteam{
     background-image: linear-gradient(#c7bade, white);
-}
+} */
 .teammember{
     margin: 0 auto;
     overflow-y: hidden;
@@ -975,9 +981,9 @@ i{
     border-bottom: 3px #f98604 solid;
 }
 
-#ourboard{
+/* #ourboard{
     background-image: linear-gradient(white, #c7bade);
-}
+} */
 .boardmember{
     width: 48%;
     margin: 1%;
@@ -1013,15 +1019,32 @@ i{
         padding: 10px;
     }
 
+    .footerdiv{
+        width: 100%;
+    }
+
     .socialmedia p{
         width: 100%;
         margin: 0;
         text-align: center;
     }
 
-    .emailInput, .emailButton{
-        margin: 0 auto;
-        width: 100%;
+    .footerdiv{
+        padding-left: 0;
+        text-align: center;
+        margin: 10px 0 0 0;
+    }
+
+    .emailInput{
+        margin: 0 5% 2px 5%;
+        width: 90%;
+        float: none;
+    }
+
+    .emailButton{
+        width: 91%;
+        margin: 0 5% 2px 5%;
+        float: none;
     }
 
     .missionStatement, .additionalInfo, .infocontainer, .infocontainerimage, .infocontainertext{
@@ -1042,7 +1065,7 @@ i{
 
     .historyText{
         margin: 0;
-        padding: 10px;
+        padding: 0 5px 0 5px;
     }
 
     .historyText p{
@@ -1059,7 +1082,7 @@ i{
     }
 }
 
-@media (max-width: 768px){
+@media (min-width: 601px) and (max-width: 768px){
     .missionStatement, .infocontainer, .additionalInfo, .history{
         width: 95%;
     }
@@ -1079,6 +1102,10 @@ i{
         float: none;
     }
 
+    .bio{
+        min-height: auto;
+    }
+
     .socialmedia{
         width: 100%;
         padding: 10px;
@@ -1090,13 +1117,22 @@ i{
         text-align: center;
     }
 
-    .emailInput, .emailButton, .emailform{
-        margin: 0 auto;
-        width: 100%;
+    .emailInput, .emailform{
+        margin: 0 5% 2px 5%;
+        width: 90%;
+    }
+
+    .emailButton{
+        margin: 0 5% 2px 5%;
+        width: 91%;
+    }
+
+    .footerdiv{
+        padding-left: 0;
     }
 }
 
-@media (max-width: 992px){
+@media (min-width: 769px) and (max-width: 992px){
     .historyText, .historyText p{
         width: 100%;
         margin-top: 10px;
@@ -1113,4 +1149,37 @@ i{
     .imagecontainer{
         height: 510px;
     }
+}
+.hide{
+    display: none;
+}
+
+.newMenuPosition{
+    position: absolute;
+    top: 54px;
+    right: 0;
+    width: 50%;
+    max-width: 150px;
+    background: white;//#420a70;
+    opacity: .9;
+
+    -webkit-transition: height .3s ease-in;
+    -moz-transition: height .3s ease-in;
+    -ms-transition: height .3s ease-in;
+    -o-transition: height .3s ease-in;
+    transition: height .3s ease-in;
+}
+
+.newMenuWidth{
+    width: 100%;
+    float: left;
+}
+
+.newMenuWidth p{
+    float: left;
+}
+
+.newMenuWidth .secondary-menu{
+    top: 0px;
+    left: -145px;
 }
