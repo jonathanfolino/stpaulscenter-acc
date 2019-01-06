@@ -199,7 +199,7 @@ body{
 
 /* MAIN */
 
-#wrapper{
+.3rdstshelter{
     width:100%;
     margin: 0 auto;
     float:none;
@@ -447,7 +447,7 @@ h4{
 
 /* Quilts */
 
-#wrapper1 {
+.wrapper1 {
     /* position: relative; */
     width: 100%;
     /* overflow: hidden; */
@@ -535,7 +535,7 @@ h4{
 
 /* HOUSING PROGRAM */
 
-#wrapper2 {
+.housing {
     width: 100%;
 }
 
@@ -1182,4 +1182,163 @@ i{
 .newMenuWidth .secondary-menu{
     top: 0px;
     left: -145px;
+}
+
+/*  */
+/*  */
+/*  */
+/* BLOG */
+/*  */
+/*  */
+/*  */
+.blogDescription{
+    text-align: center;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    padding : 15px;
+    float: none;
+}
+
+#blogLogo{
+    height: 20%;
+    width:20%;
+    margin: 0 auto;
+    display: block;
+}
+.blogLinks{
+    text-align: center;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    /* padding : 0 42% 0 43%; */
+    float: none;
+    font-weight: bold;
+}
+.blogPostsLink{
+    float: left;
+    padding: 5px;
+    margin-left: 40%;
+    transition: 100ms;
+
+}
+.blogPostsLink:hover{
+    cursor: pointer;
+    color: #717171;
+
+}
+.blogArticlesLink{
+    float: right;
+    padding: 5px;
+    margin-right: 40%;
+    transition: 100ms;
+}
+.blogArticlesLink:hover{
+    cursor: pointer;
+    color: #717171;
+}
+.blogPostContainer{
+    box-sizing: border-box;
+    max width: 500px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+.blogPost{
+    border: 1px solid #c2c5d3;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    margin: 45px 0 45px 0;
+
+}
+.blogPostDate{
+    text-align: left;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    float: none;
+    font-weight: bold;
+    padding-left: 7%;
+}
+.blogPostTitle{
+    text-align: left;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    float: none;
+    padding-left: 7%;
+}
+.blogPostPhoto{
+    height: 85%;
+    width: 85%;
+    margin: 0 auto;
+    display: block;
+}
+.blogPostText{
+    text-align: center;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    padding : 15px;
+    float: none;
+}
+/*  */
+/*  */
+/*  */
+/* ARTICLES */
+/*  */
+/*  */
+/*  */
+.articlePostContainer{
+    box-sizing: border-box;
+    max width: 500px;
+    padding-left: 20%;
+    padding-right: 20%;
+    display: none;
+}
+.articlePost{
+    border: 1px solid #c2c5d3;
+    padding-bottom: 35px;
+    padding-top: 35px;
+    margin: 45px 0 45px 0;
+
+}
+.articlePostDate{
+    text-align: left;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    float: none;
+    font-weight: bold;
+    padding-left: 57%;
+}
+.articlePostTitle{
+    text-align: left;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 20px;
+    float: none;
+    padding-left: 57%;
+}
+.articlePostPhoto{
+    width: 50%;
+    position: absolute;
+    right: 50%;
+    top: 0px;
+    height: 100%;
+    z-index: 100;
+    background-image: url("../img/placeholder.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.articlePostText{
+    text-align: left;
+    color: #000000;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 13px;
+    padding : 15px;
+    float: none;
+    padding-Left: 57%;
+    background: #ffffff;
+    z-index: 90;
 }

@@ -104,4 +104,18 @@ $(document).ready(function(){
         });
     }, 5000);
 
+    // Blog
+        $('.blogPostsLink').click(function(e){
+        e.preventDefault();
+        $('.articlePostContainer').fadeOut('fast', function(){
+            $('.blogPostContainer').fadeIn('fast');
+            });
+        });
+
+        $('.blogArticlesLink').click(function(e){
+        e.preventDefault();
+        $('.blogPostContainer').fadeOut('fast', function(){
+            $('.articlePostContainer').fadeIn('fast');
+            });
+        });
 });
