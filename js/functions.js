@@ -22,22 +22,29 @@ $(document).ready(function(){
     //function used to control the navbar display
     function navbarDisplayControl(icon, container, links){
         if($(window).width() < 860){
+            //hamburger is not visible
             if (!$(icon).hasClass("unhide")){
                 $(icon).addClass("unhide");
-                $(container).addClass("hide");
+                $(container).addClass("newMenuPosition");
+                links.each(function(){
+                    $(this).addClass("newMenuWidth");
+                });
             }
         }
 
-        else if ($(window).width() >= 861){
+        else {
+            //if hamburger is visible the hide it
             if ($(icon).hasClass("unhide")){
                 $(icon).removeClass("unhide");
-                $(container).removeClass("hide");
-                if ($(container).hasClass("newMenuPosition")){
-                    $(container).removeClass("newMenuPosition");
-                    links.each(function(){
-                        $(this).removeClass("newMenuWidth");
-                    });
+                //if the primary menu is visible under the hamburger then slide it off screen
+                if ($(container).hasClass("slideLeft")){
+                    $(container).removeClass("slideLeft");
                 }
+                // if ($(container).hasClass("newMenuPosition")){
+                $(container).removeClass("newMenuPosition");
+                links.each(function(){
+                    $(this).removeClass("newMenuWidth");
+                });
             }
         }
     }
@@ -71,20 +78,12 @@ $(document).ready(function(){
     //control what happens when hamburger is clicked
     $(hamburger).on("click", function(){
         //if the priamry menu is open
-        if ($(primaryMenuLinks[0]).hasClass("newMenuWidth")){
-            $(linkContainer).removeClass("newMenuPosition");
-            $(linkContainer).addClass("hide");
-            primaryMenuLinks.each(function(){
-                $(this).removeClass("newMenuWidth");
-            });
+        if ($(linkContainer).hasClass("slideLeft")){
+            $(linkContainer).removeClass("slideLeft");
         }
         //if the primary menu is closed
         else {
-            $(linkContainer).addClass("newMenuPosition");
-            $(linkContainer).removeClass("hide");
-            primaryMenuLinks.each(function(){
-                $(this).addClass("newMenuWidth");
-            });
+            $(linkContainer).addClass("slideLeft");
         }
     });
 
@@ -105,17 +104,17 @@ $(document).ready(function(){
     }, 5000);
 
     // Blog
-        $('.blogPostsLink').click(function(e){
+    $('.blogPostsLink').click(function(e){
         e.preventDefault();
         $('.articlePostContainer').fadeOut('fast', function(){
             $('.blogPostContainer').fadeIn('fast');
-            });
         });
+    });
 
-        $('.blogArticlesLink').click(function(e){
+    $('.blogArticlesLink').click(function(e){
         e.preventDefault();
         $('.blogPostContainer').fadeOut('fast', function(){
             $('.articlePostContainer').fadeIn('fast');
-            });
         });
+    });
 });

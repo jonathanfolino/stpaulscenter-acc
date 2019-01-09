@@ -754,10 +754,10 @@ i{
     background-size: cover;
     overflow: hidden;
 
-    -moz-transition: scale .5s;
-    -webkit-transition: scale .5s;
-    -o-transition: scale .5s;
-    -ms-transition: scale .5s;
+    -moz-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    -ms-transition: all .5s ease-in;
     transition: all .5s ease-in;
 }
 
@@ -1157,17 +1157,21 @@ i{
 .newMenuPosition{
     position: absolute;
     top: 54px;
-    right: 0;
+    right: -150px;
     width: 50%;
     max-width: 150px;
     background: white;//#420a70;
     opacity: .9;
 
-    -webkit-transition: height .3s ease-in;
-    -moz-transition: height .3s ease-in;
-    -ms-transition: height .3s ease-in;
-    -o-transition: height .3s ease-in;
-    transition: height .3s ease-in;
+    -webkit-transition: all .3s ease-in;
+    -moz-transition: all .3s ease-in;
+    -ms-transition: all .3s ease-in;
+    -o-transition: all .3s ease-in;
+    transition: all .3s ease-in;
+}
+
+.slideLeft{
+    transform: translateX(-150px);
 }
 
 .newMenuWidth{
