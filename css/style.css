@@ -263,7 +263,7 @@ h2{
 .donateButton{
     width: 100px;
     height: 50px;
-    background-color: #e6e6ff;
+    background-color: #d4d4ff;
     margin: 0 auto;
     border-radius: 5px;
     float: none;
@@ -291,7 +291,7 @@ h3{
     display: block;
 }
 .textBox{
-    background-color: #e6e6ff;
+    background-color: #d4d4ff;
     border: 2px solid #c2c5d3;
     border-radius: 1px;
     margin-bottom: 25px;
@@ -1188,7 +1188,7 @@ i{
 }
 .getInvolvedVolunteerRow{
     padding: 0;
-    background:#71e1e2;
+    background:#d8c7f9;
 }
 .getInvolvedTitle{
     text-align: center;
@@ -1216,11 +1216,11 @@ i{
 }
 .getInvolvedBODRow{
     padding: 10px 0 0 0;
-    background:#ffca0a;
+    background:#d7cee2;
 }
 .getInvolvedEventsRow{
     padding: 10px 0 0 0;
-    background:#64e896;
+    background:#ccccff;
 }
 .getInvolvedEventContainer{
     box-sizing: border-box;
