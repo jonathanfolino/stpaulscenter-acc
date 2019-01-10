@@ -48,6 +48,7 @@ $(document).ready(function(){
             }
         }
     }
+
     //call the function when the window is initally loaded
     navbarDisplayControl(hamburger, linkContainer, primaryMenuLinks);
 
@@ -105,16 +106,25 @@ $(document).ready(function(){
 
     // Blog
     $('.blogPostsLink').click(function(e){
-        e.preventDefault();
-        $('.articlePostContainer').fadeOut('fast', function(){
-            $('.blogPostContainer').fadeIn('fast');
-        });
+        if(!$(this).hasClass("selected")){
+            e.preventDefault();
+            $('.articlePostContainer').fadeOut('fast', function(){
+                $('.blogPostContainer').fadeIn('fast');
+            });
+            $('.blogArticlesLink').toggleClass("selected");
+            $(this).toggleClass("selected");
+        }
     });
 
     $('.blogArticlesLink').click(function(e){
-        e.preventDefault();
-        $('.blogPostContainer').fadeOut('fast', function(){
-            $('.articlePostContainer').fadeIn('fast');
-        });
+        if(!$(this).hasClass("selected")){
+            e.preventDefault();
+            $('.blogPostContainer').fadeOut('fast', function(){
+                $('.articlePostContainer').fadeIn('fast');
+            });
+            $('.blogPostsLink').toggleClass("selected");
+            $(this).toggleClass("selected");
+
+        }
     });
 });

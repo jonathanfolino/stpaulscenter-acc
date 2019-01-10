@@ -21,48 +21,70 @@
         <title>St. Paul's Center</title>
     </head>
     <body>
+        <div class="popupRequest">
+            <div class="popupBackground"></div>
+            <div class="popupContent">
+                <div>
+                    <i class="far fa-window-close closePopup"></i>
+                </div>
+                <p>Before you leave, join our email list by entering your email address below.</p>
+                <form class="popupform">
+                    <input class="popupInput" type="email" placeholder="Enter email address">
+                    <button class="popupButton" type="submit">Join</button>
+                </form>
+            </div>
+        </div>
         <div id="navbar">
             <div id="logo">
                 <img id="logoGraphic" src="img/logo-placeholder.png" alt="placeholderLogo">
             </div>
-            <li class="primary-menu-item">
-                <p class="navOption boldItem"><i class="far fa-heart boldItem"></i>Donate</p>
+            <li class="hamburger-item">
+                <i class="fas fa-bars hamburger"></i>
             </li>
-            <li class="primary-menu-item">
-                <p class="navOption">Learn</p>
-                <ul class="secondary-menu">
+            <ul class="linkContainer">
+                <li class="primary-menu-item">
+                    <p class="navOption"><a href="index.html">Home</a></p>
+                </li>
+                <li class="primary-menu-item">
+                    <p class="navOption"><a href="about.html">About</a></p>
+                    <ul class="secondary-menu moveMenuLeft">
+                        <li class="secondary-menu-item top"><a href="#ourmission">Our Mission</a></li>
+                        <li class="secondary-menu-item"><a href="#ourhistory">Our History</a></li>
+                        <li class="secondary-menu-item"><a href="#ourteam">Our Team</a></li>
+                        <li class="secondary-menu-item"><a href="#ourboard">Our Board</a></li>
+                        <li class="secondary-menu-item"><a href="#contact">Contact Us</a></li>
+                    </ul>
+                </li>
+                <li class="primary-menu-item">
+                    <p class="navOption"><a href="ourprojects.html">Our Projects</a></p>
+                    <ul class="secondary-menu">
+                        <li class="secondary-menu-item top"><a href="#3rdstshelter">3rd St Shelter</a></li>
+                        <li class="secondary-menu-item"><a href="#housing">Housing Program</a></li>
+                        <li class="secondary-menu-item"><a href="#quilts">Quilts</a></li>
+                    </ul>
+                </li>
+                <li class="primary-menu-item">
+                    <p class="navOption"><a href="getinvolved.html">Get Involved</a></p>
+                    <ul class="secondary-menu">
+                        <li class="secondary-menu-item top"><a href="#volunteer">Volunteer</a></li>
+                        <li class="secondary-menu-item"><a href="#joinboard">Join Our Board</a></li>
+                        <li class="secondary-menu-item"><a href="#events">Events</a></li>
+                        <li class="secondary-menu-item"><a href="#employment">Employment</a></li>
+                    </ul>
+                </li>
+                <li class="primary-menu-item">
+                    <p class="navOption"><a href="learn.html">Learn</a></p>
+                    <ul class="secondary-menu">
                         <li class="secondary-menu-item top"><a href="#">Blog</a></li>
                         <li class="secondary-menu-item"><a href="#">Articles</a></li>
-                </ul>
-            </li>
-            <li class="primary-menu-item">
-                <p class="navOption">Get Involved</p>
-                <ul class="secondary-menu">
-                        <li class="secondary-menu-item top"><a href="#">Volunteer</a></li>
-                        <li class="secondary-menu-item"><a href="#">Board of Directors</a></li>
-                        <li class="secondary-menu-item"><a href="#">Events</a></li>
-                        <li class="secondary-menu-item"><a href="#">Employment</a></li>
                     </ul>
-            </li>
-            <li class="primary-menu-item">
-                <p class="navOption">Our Projects</p>
-                <ul class="secondary-menu">
-                    <li class="secondary-menu-item top"><a href="#3rdstshelter">3rd St Shelter</a></li>
-                    <li class="secondary-menu-item"><a href="#housing">Housing Program</a></li>
-                    <li class="secondary-menu-item"><a href="#quilts">Quilts</a></li>
-                </ul>
-            </li>
-            <li class="primary-menu-item">
-                <p class="navOption">About</p>
-                    <ul class="secondary-menu moveMenuLeft">
-                        <li class="secondary-menu-item top"><a href="#">Our Mission</a></li>
-                        <li class="secondary-menu-item"><a href="#">Our Team</a></li>
-                        <li class="secondary-menu-item"><a href="#">Our Board</a></li>
-                        <li class="secondary-menu-item"><a href="#">Contact Us</a></li>
-                    </ul>
-            </li>
+                </li>
+                <li class="primary-menu-item">
+                    <p class="navOption boldItem"><a href="https://www.nycharities.org/give/donate.aspx?cc=1923" target="_blank"><i class="far fa-heart boldItem"></i>Donate</a></p>
+                </li>
+            </ul>
         </div>
-        <div id="3rdstshelter" class="3rdstshelter">
+        <div id="3rdstshelter" class="thirdstshelter">
 
 
 
@@ -150,7 +172,7 @@
                 </div>
 
                 <div class="quiltphoto2">
-                    
+
                 </div>
 
             <!-- </div> -->

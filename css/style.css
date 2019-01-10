@@ -12,7 +12,7 @@ body{
 /* NAVBAR */
 
 .primary-menu-item{
-    float: right;
+    float: left;
     list-style: none;
     position: relative;
     padding: 0 0 0 20px;
@@ -199,7 +199,7 @@ body{
 
 /* MAIN */
 #wrapper{
-    width:100%;
+    max-width: 1400px;
     margin: 0 auto;
     float:none;
     overflow-y:hidden;
@@ -308,10 +308,12 @@ h4{
 }
 .subContainer{
     margin-bottom: 15px;
+    overflow: hidden;
 }
 .rowCaptionLeft{
-    padding-right: 50%;
+    width: 50%;
     background: #ffffff;
+    z-index: 2;
 }
 .rowPhotoRight{
     width: 50%;
@@ -323,9 +325,16 @@ h4{
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
+
+    -moz-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    -ms-transition: all .5s ease-in;
+    transition: all .5s ease-in;
 }
 .rowCaptionRight{
-    padding-Left: 50%;
+    padding-left: 50%;
     background: #ffffff;
     z-index: 90;
 }
@@ -340,6 +349,13 @@ h4{
     background-repeat: no-repeat;
     background-size: cover;
     z-index: 100;
+    overflow: hidden;
+
+    -moz-transition: all .5s ease-in;
+    -webkit-transition: all .5s ease-in;
+    -o-transition: all .5s ease-in;
+    -ms-transition: all .5s ease-in;
+    transition: all .5s ease-in;
 }
 .textContainer{
     padding: 5% 10% 5% 10%;
@@ -372,7 +388,7 @@ h4{
     opacity: .1;
 }
 .textRowContainer{
-    padding: 3% 15% 3% 15%
+    padding: 3% 15% 3% 15%;
 }
 .textRowBox{
     background: #e6e6ff;
@@ -445,6 +461,11 @@ h4{
 }
 
 /* Quilts */
+
+.thirdstshelter{
+    padding: 20px 0 0 0;
+
+}
 
 .wrapper1 {
     /* position: relative; */
@@ -690,15 +711,17 @@ i{
 .maincontainer{
     padding: 40px 0;
     font-family: 'Nanum Gothic', sans-serif;
-    background: #47454f;
-    max-width: 1200px;
+    background: #eee;
+    max-width: 1400px;
     margin: 0 auto;
     float: none;
     overflow: hidden;
 }
 
 .title, .subtitle, .subsubtitle{
-    color: black;
+    color: white;
+    background: #c7bade;
+    padding: 10px 0 10px 0;
 }
 
 .title{
@@ -709,9 +732,6 @@ i{
     padding-top: 30px;
 }
 
-/* #ourmission{
-    background-image: linear-gradient(#c7bade, #420a70);
-} */
 
 .missionStatement{
     width: 80%;
@@ -761,7 +781,9 @@ i{
 }
 
 
-.infocontainerimage:hover{
+.infocontainerimage:hover,
+.rowPhotoRight:hover
+/* ,.rowPhotoLeft:hover*/{
     -moz-transform: scale(1.2);
     -webkit-transform: scale(1.2);
     -o-transform: scale(1.2);
@@ -816,22 +838,8 @@ i{
     float: none;
 }
 
-/* .bridgestext{
-    width: 33.33%;
-    margin: 0;
-    background: green;
-}
-
-.bridgesimage{
-    height: 100%;
-    width: 33.33%;
-    margin: 0;
-} */
-
 #ourhistory{
-    background: white;
     padding-bottom: 30px;
-    /* background-image: linear-gradient(#420a70, #c7bade); */
 }
 
 .history{
@@ -873,81 +881,27 @@ i{
     width: 80%;
 }
 
-/* #ourteam{
-    background-image: linear-gradient(#c7bade, white);
-} */
 .teammember{
-    margin: 0 auto;
-    overflow-y: hidden;
-    width: 48%;
-    margin: 1%;
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto 20px auto;
+    float: none;
     background: white;
+    min-height: 210px;
+    border: 1px grey solid;
 }
 
 .teaminfo{
-    padding: 10px 20px;;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    color: white;
-    opacity: 1;
-    line-height: 20px;
-
-    -webkit-transition: opacity .2s ease-in;
-    -moz-transition: opacity .2s ease-in;
-    -ms-transition: opacity .2s ease-in;
-    -o-transition: opacity .2s ease-in;
-    transition: opacity .2s ease-in;
-}
-
-.teammember:hover .imageOverlay{
-    opacity: 0;
-}
-
-.teammember:hover .teaminfo{
-    opacity: 0;
-}
-
-/* .imagecontainer{
-    width: 25%;
+    padding: 0;
+    width: 70%;
     margin: 0;
-} */
+    line-height: 20px;
+}
 
 .imagecontainer{
-    /* background-image: url("../img/tracy.jpg"); */
-    background-position: top;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 400px;
+    width: 30%;
+    height: 210px;
     padding: 0;
-}
-
-.tracy{
-    background-image: url("../img/tracy.jpg");
-}
-
-.shavina{
-    background-image: url("../img/shavina.jpg");
-}
-
-.charlee{
-    background-image: url("../img/charlee.jpg");
-}
-
-.jason{
-    background-image: url("../img/Jason.jpg");
-}
-
-.amanda{
-    background-image: url("../img/Amanda.jpg");
-}
-
-.samjones{
-    background-image: url("../img/samjones.jpg");
-
 }
 
 .imageOverlay{
@@ -965,8 +919,9 @@ i{
 }
 .teammember img{
     display: block;
-    float: left;
-    width: 100%;
+    float: none;
+    margin: 0 auto;
+    width: 200px;
 }
 
 .name{
@@ -980,9 +935,6 @@ i{
     border-bottom: 3px #f98604 solid;
 }
 
-/* #ourboard{
-    background-image: linear-gradient(white, #c7bade);
-} */
 .boardmember{
     width: 48%;
     margin: 1%;
@@ -990,165 +942,12 @@ i{
 
 .bio{
     padding: 20px;
-    background: white; //#e6e6ff;
+    background: white;
     min-height: 270px;
     margin-top: 0;
     line-height: 20px;
 }
 
-@media (max-width: 600px){
-    .maincontainer{
-        padding: 20px 0 0 0;
-    }
-
-    .popupform, .emailform{
-        width: 100%;
-    }
-
-    .popupInput, .popupButton{
-        width: 90%;
-    }
-
-    .popupButton{
-        margin: 5px 0 0 0;
-    }
-
-    .socialmedia{
-        width: 100%;
-        padding: 10px;
-    }
-
-    .footerdiv{
-        width: 100%;
-    }
-
-    .socialmedia p{
-        width: 100%;
-        margin: 0;
-        text-align: center;
-    }
-
-    .footerdiv{
-        padding-left: 0;
-        text-align: center;
-        margin: 10px 0 0 0;
-    }
-
-    .emailInput{
-        margin: 0 5% 2px 5%;
-        width: 90%;
-        float: none;
-    }
-
-    .emailButton{
-        width: 91%;
-        margin: 0 5% 2px 5%;
-        float: none;
-    }
-
-    .missionStatement, .additionalInfo, .infocontainer, .infocontainerimage, .infocontainertext{
-        width: 100%;
-    }
-
-    .infocontainer{
-        height: auto;
-    }
-
-    .infocontainerimage{
-        height: 100vw;
-    }
-
-    .history{
-        width: 100%;
-    }
-
-    .historyText{
-        margin: 0;
-        padding: 0 5px 0 5px;
-    }
-
-    .historyText p{
-        width: 100%;
-    }
-
-    .teammember, .boardmember{
-        width: 100%;
-        margin: 5px 0 0 0;
-    }
-
-    .boardmember, .bio{
-        min-height: auto;
-    }
-}
-
-@media (min-width: 601px) and (max-width: 768px){
-    .missionStatement, .infocontainer, .additionalInfo, .history{
-        width: 95%;
-    }
-
-    .historyText{
-        padding: 10px;
-        margin: 0;
-    }
-
-    .historyText p{
-        width: 100%;
-    }
-
-    .teammember, .boardmember{
-        width: 95%;
-        margin: 5px auto;
-        float: none;
-    }
-
-    .bio{
-        min-height: auto;
-    }
-
-    .socialmedia{
-        width: 100%;
-        padding: 10px;
-    }
-
-    .socialmedia p{
-        width: 100%;
-        margin: 0;
-        text-align: center;
-    }
-
-    .emailInput, .emailform{
-        margin: 0 5% 2px 5%;
-        width: 90%;
-    }
-
-    .emailButton{
-        margin: 0 5% 2px 5%;
-        width: 91%;
-    }
-
-    .footerdiv{
-        padding-left: 0;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 992px){
-    .historyText, .historyText p{
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .socialmedia p{
-        margin: 13px 10px 0 10px;
-    }
-
-    .bio{
-        height: 420px;
-    }
-
-    .imagecontainer{
-        height: 510px;
-    }
-}
 .hide{
     display: none;
 }
@@ -1159,14 +958,20 @@ i{
     right: -150px;
     width: 50%;
     max-width: 150px;
-    background: white;//#420a70;
-    opacity: .9;
+    background: #420a70;
 
     -webkit-transition: all .3s ease-in;
     -moz-transition: all .3s ease-in;
     -ms-transition: all .3s ease-in;
     -o-transition: all .3s ease-in;
     transition: all .3s ease-in;
+}
+
+.contactinfo{
+    text-align: center;
+    margin: 10px auto 10px auto;
+    max-width: 500px;
+    float: none;
 }
 
 .slideLeft{
@@ -1176,10 +981,13 @@ i{
 .newMenuWidth{
     width: 100%;
     float: left;
+    border-bottom: 2px #ccc solid;
+    padding: 0 0 5px 20px;
 }
 
 .newMenuWidth p{
     float: left;
+    text-align: left;
 }
 
 .newMenuWidth .secondary-menu{
@@ -1199,8 +1007,7 @@ i{
     color: #000000;
     font-family: 'Open Sans', sans-serif;
     font-size: 18px;
-    padding : 15px;
-    float: none;
+    padding : 0 15px 15px 15px;
 }
 
 #blogLogo{
@@ -1217,11 +1024,13 @@ i{
     /* padding : 0 42% 0 43%; */
     float: none;
     font-weight: bold;
+    overflow: hidden;
 }
 .blogPostsLink{
     float: left;
-    padding: 5px;
-    margin-left: 40%;
+    padding: 0 10px 0 0;
+    width: calc(50% - 10px);
+    text-align: right;
     transition: 100ms;
 
 }
@@ -1232,8 +1041,9 @@ i{
 }
 .blogArticlesLink{
     float: right;
-    padding: 5px;
-    margin-right: 40%;
+    padding: 0 0 0 10px;
+    width: calc(50% - 10px);
+    text-align: left;
     transition: 100ms;
 }
 .blogArticlesLink:hover{
@@ -1345,6 +1155,10 @@ i{
     z-index: 90;
 }
 
+.selected{
+    color: #717171;
+}
+
 /*  */
 /*  */
 /*  */
@@ -1401,11 +1215,11 @@ i{
     font-weight: bold;
 }
 .getInvolvedBODRow{
-    padding: 0;
+    padding: 10px 0 0 0;
     background:#ffca0a;
 }
 .getInvolvedEventsRow{
-    padding: 0;
+    padding: 10px 0 0 0;
     background:#64e896;
 }
 .getInvolvedEventContainer{
@@ -1475,7 +1289,7 @@ i{
     margin: 3px 0 3px 0;
 }
 .getInvolvedEmploymentRow{
-    padding: 0;
+    padding: 10px 0 0 0;
     background:#ffffff;
 }
 .getInvolvedEmploymentTitle{
@@ -1507,4 +1321,266 @@ i{
 .getInvolvedJob{
     margin: 3px 0 3px 0;
     padding-right: 35px;
+}
+
+/*  */
+/*  */
+/*  */
+/* MEDIA QUERIES */
+/*  */
+/*  */
+/*  */
+
+@media (max-width: 600px){
+    .maincontainer{
+        padding: 20px 0 0 0;
+    }
+
+    .popupform, .emailform{
+        width: 100%;
+    }
+
+    .popupInput, .popupButton{
+        width: 90%;
+    }
+
+    .popupButton{
+        margin: 5px 0 0 0;
+    }
+
+    .socialmedia{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .footerdiv{
+        width: 100%;
+    }
+
+    .socialmedia p{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .footerdiv{
+        padding-left: 0;
+        text-align: center;
+        margin: 10px 0 0 0;
+    }
+
+    .emailInput{
+        margin: 0 5% 2px 5%;
+        width: 90%;
+        float: none;
+    }
+
+    .emailButton{
+        width: 91%;
+        margin: 0 5% 2px 5%;
+        float: none;
+    }
+
+    .missionStatement, .additionalInfo, .infocontainer, .infocontainerimage, .infocontainertext{
+        width: 100%;
+    }
+
+    .container{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .rowCaptionLeft{
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .rowCaptionRight{
+        padding-left: 0;
+    }
+
+    .rowPhotoRight{
+        position: relative;
+        min-height: 210px;
+        width: 100%;
+        left: 0;
+    }
+
+    .rowPhotoLeft{
+        position: relative;
+        min-height: 210px;
+        width: 100%;
+        right: 0;
+    }
+
+    .blogPostContainer, .articlePostContainer{
+        padding-left: 1%;
+        padding-right: 1%;
+    }
+
+    .textRowContainer{
+        padding: 3% 0 3% 0;
+    }
+
+    .infocontainer{
+        height: auto;
+    }
+
+    .infocontainerimage{
+        height: 100vw;
+    }
+
+    .history{
+        width: 100%;
+    }
+
+    .historyText{
+        margin: 0;
+        padding: 0 5px 0 5px;
+    }
+
+    .historyText p{
+        width: 100%;
+        font-size: 14px;
+        margin: 15px auto 0 auto;
+    }
+
+    .teammember, .boardmember{
+        width: 100%;
+        max-width: 1000px;
+        margin: 5px auto 5px auto;
+    }
+
+    .smallbio{
+        padding: 10px;
+    }
+
+    .imagecontainer{
+        width: 100%;
+        height: auto;
+    }
+
+    .teaminfo{
+        padding: 0;
+        width: 100%;
+        margin: 5px 0 0 0;
+    }
+
+    .boardmember, .bio{
+        min-height: auto;
+    }
+
+    .getInvolvedEventContainer{
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 768px){
+    .missionStatement, .infocontainer, .additionalInfo, .history{
+        width: 95%;
+    }
+
+    .container{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .textRowContainer{
+        padding: 3%;
+    }
+
+    .historyText{
+        padding: 10px;
+        margin: 0;
+    }
+
+    .historyText p{
+        width: 100%;
+    }
+
+    .teammember, .boardmember{
+        width: 90%;
+        margin: 5px auto;
+        float: none;
+    }
+    .imagecontainer{
+        width: 100%;
+        height: auto;
+    }
+
+    .teaminfo{
+        padding: 0;
+        width: 100%;
+        margin: 5px 0 0 0;
+    }
+
+    .smallbio{
+        padding: 10px;
+    }
+
+    .bio{
+        min-height: auto;
+    }
+
+    .getInvolvedEventContainer,
+    .blogPostContainer,
+    .articlePostContainer{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .socialmedia{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .socialmedia p{
+        width: 100%;
+        margin: 0;
+        text-align: center;
+    }
+
+    .emailInput, .emailform{
+        margin: 0 5% 2px 5%;
+        width: 90%;
+    }
+
+    .emailButton{
+        margin: 0 5% 2px 5%;
+        width: 91%;
+    }
+
+    .footerdiv{
+        padding-left: 0;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 992px){
+    .container{
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+    .historyText, .historyText p{
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .getInvolvedEventContainer,
+    .articlePostContainer{
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+
+    .socialmedia p{
+        margin: 13px 10px 0 10px;
+    }
+
+    .bio{
+        height: 420px;
+    }
+
+    .smallbio{
+        padding: 10px;
+    }
 }
