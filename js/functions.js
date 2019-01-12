@@ -10,6 +10,9 @@ $(document).ready(function(){
     //get all of the primary menu links
     var primaryMenuLinks = $(".primary-menu-item");
 
+    //get all the divs with the navOption class ClassName {
+    var navOptions = $("navOption");
+
     //get all of the secondary links
     var secondaryMenuLinks = $(".secondary-menu-item");
 
@@ -21,7 +24,7 @@ $(document).ready(function(){
 
     //function used to control the navbar display
     function navbarDisplayControl(icon, container, links){
-        if($(window).width() < 860){
+        if($("body").width() < 860){
             //hamburger is not visible
             if (!$(icon).hasClass("unhide")){
                 $(icon).addClass("unhide");

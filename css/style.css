@@ -41,9 +41,9 @@ body{
     transition: height .3s ease-in;
 }
 
-.navOption:hover + .secondary-menu{
+/* .navOption:hover + .secondary-menu{
     height: 170px;
-}
+} */
 
 .secondary-menu:hover{
     height: 170px;
@@ -92,7 +92,7 @@ body{
     min-height: 50px;
     position: fixed;
     z-index: 10000;
-    background: white;
+    background: #7f609e;
 }
 #logo{
     width:15%;
@@ -118,7 +118,7 @@ body{
 
 .hamburger{
     font-size: 42px;
-    color: #420a70;
+    color: #c7bade;//420a70;
     margin-right: 10px;
     display: none;
 }
@@ -291,7 +291,7 @@ h3{
     display: block;
 }
 .textBox{
-    background-color: #e6e6ff;
+    background-color: #d4d4ff;
     border: 2px solid #c2c5d3;
     border-radius: 1px;
     margin-bottom: 25px;
@@ -737,7 +737,7 @@ i{
     width: 80%;
     margin: 0 auto 20px auto;
     text-align: center;
-    background: #e6e6ff;
+    background: #d4d4ff;
     color: white;
     border: 2px solid #c2c5d3;
     font-family: 'Open Sans', sans-serif;
@@ -829,7 +829,7 @@ i{
     width: 80%;
     margin: 25px auto 20px auto;
     text-align: center;
-    background: #e6e6ff;
+    background: #d4d4ff;
     color: white;
     border: 2px solid #c2c5d3;
     font-family: 'Open Sans', sans-serif;
@@ -858,7 +858,7 @@ i{
 .historyOverlay{
     margin: 0;
     background: black;
-    opacity: .6;
+    opacity: .8;
     width: 100%;
     height: 100%;
 }
@@ -898,9 +898,13 @@ i{
     line-height: 20px;
 }
 
+.smallbio{
+    padding: 0 15px 0 15px;
+}
+
 .imagecontainer{
     width: 30%;
-    height: 210px;
+    height: 100%;//210px;
     padding: 0;
 }
 
@@ -922,6 +926,7 @@ i{
     float: none;
     margin: 0 auto;
     width: 200px;
+    height: 100%;
 }
 
 .name{
@@ -929,7 +934,7 @@ i{
     font-weight: bold;
     margin: 0;
     padding: 10px;
-    background: #420a70;
+    background: #7f609e;
     color: white;
     text-align: center;
     border-bottom: 3px #f98604 solid;
@@ -958,7 +963,7 @@ i{
     right: -150px;
     width: 50%;
     max-width: 150px;
-    background: #420a70;
+    background: #7f609e;
 
     -webkit-transition: all .3s ease-in;
     -moz-transition: all .3s ease-in;
@@ -1381,6 +1386,10 @@ i{
         float: none;
     }
 
+    .storyCaption{
+        font-size: 12px;
+    }
+
     .missionStatement, .additionalInfo, .infocontainer, .infocontainerimage, .infocontainertext{
         width: 100%;
     }
@@ -1582,5 +1591,10 @@ i{
 
     .smallbio{
         padding: 10px;
+    }
+}
+@media(min-width: 877px){
+    .navOption:hover + .secondary-menu{
+        height: 170px;
     }
 }
