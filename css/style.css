@@ -460,6 +460,25 @@ h4{
     height: 70px;
 }
 
+/* our projects  */
+
+/* .projects{ */
+    /* text-align: center; */
+    /* font-family: 'Nanum Gothic', sans-serif; */
+    /* font-size: 60px; */
+    /* color: ##787070; */
+    /* display: block; */
+/* } */
+
+.intro{
+    font-family: 'Open Sans', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    color: ##787070;
+    display: block;
+}
+
+
 /* Quilts */
 
 .thirdstshelter{
